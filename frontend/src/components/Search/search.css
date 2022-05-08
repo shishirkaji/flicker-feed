@@ -1,9 +1,11 @@
 .input-contain {
     position: relative;
-    margin: 0 auto;
-    max-width: 900px;
-    width: 70%;
-    padding: 50px 24px 50px 24px;
+    max-width: 17rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22em;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .input-res {

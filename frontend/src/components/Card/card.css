@@ -10,8 +10,10 @@
 }
 
 .card > .card_image {
+    height: 183px;
     object-fit: cover;
-    width: 100%;
+    object-position: center;
+    border-radius: 3px;
 }
 
 .card > .card_title {

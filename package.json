@@ -1,0 +1,25 @@
+{
+    "name": "flicker-feed",
+    "version": "1.0.0",
+    "description": "main project",
+    "main": "index.js",
+    "scripts": {
+        "client": "cd ./frontend/ && npm start",
+        "server": "cd ./server/ && npm run dev",
+        "all": "concurrently \"npm run client\" \"npm run server\" ",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shishirkaji/flicker-feed.git"
+    },
+    "author": "shishir",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/shishirkaji/flicker-feed/issues"
+    },
+    "homepage": "https://github.com/shishirkaji/flicker-feed#readme",
+    "dependencies": {
+        "concurrently": "^7.1.0"
+    }
+}
