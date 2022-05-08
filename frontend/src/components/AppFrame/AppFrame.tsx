@@ -15,21 +15,21 @@ function App() {
 
             <CardFrame>
                 <Card
-                    imageUrl="asdfasd"
-                    thumbNail="asdfasd"
+                    imageUrl="https://live.staticflickr.com//65535//52056886712_6aa6c1455c_m.jpg"
+                    thumbNail="https://live.staticflickr.com//65535//52056886712_6aa6c1455c_m.jpg"
                     title="Damn daniel title asdfsadfasdfasdf Damn daniel titleasdfasdfasfas Damn daniel titleasdfasdfasfas Damn daniel titleasdfasdfasfas Damn daniel titleasdfasdfasfas "
                     tags={
                         "nobody@flickr.comnobody @flickr.comnobody @flickr.com  nobody@flickr.comnobody @flickr.comnobody @flickr.com  nobody@flickr.comnobody @flickr.comnobody @flickr.com"
                     }
                 />
                 <Card
-                    thumbNail="asdfasd"
+                    thumbNail="https://live.staticflickr.com//65535//52056886712_6aa6c1455c_m.jpg"
                     imageUrl="asdfasd"
                     title="Damn daniel title"
                     tags={"nobody@flickr.comnobody @flickr.comnobody @}"}
                 />
                 <Card
-                    thumbNail="asdfasd"
+                    thumbNail="https://live.staticflickr.com//65535//52056886712_6aa6c1455c_m.jpg"
                     imageUrl="asdfasd"
                     title="Damn daniel title"
                     tags={

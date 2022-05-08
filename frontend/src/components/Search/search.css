@@ -2,7 +2,8 @@
     position: relative;
     margin: 0 auto;
     max-width: 900px;
-    padding: 50px 30px;
+    width: 70%;
+    padding: 50px 24px 50px 24px;
 }
 
 .input-res {
@@ -11,7 +12,7 @@
     max-width: 500px;
     background-color: #0e468c;
     border: none;
-    padding: 10px 11px 11px 11px;
+    padding: 11px 36px 11px 36px;
     border-radius: 20px;
     box-shadow: none;
     outline: none;
