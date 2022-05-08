@@ -15,15 +15,17 @@ const Search = (props: SearchProps) => {
         setSearchText(newSearchTerm);
     };
     return (
-        <div className="input-contain">
-            <input
-                className="input-res"
-                data-testid="search"
-                name="searchTerm"
-                placeholder="Search flixer"
-                onChange={handleSearchTermUpdate}
-                value={searchText}
-            />
+        <div className="search_wrapper">
+            <div className="input-contain">
+                <input
+                    className="input-res"
+                    data-testid="search"
+                    name="searchTerm"
+                    placeholder="Search flixer"
+                    onChange={handleSearchTermUpdate}
+                    value={searchText}
+                />
+            </div>
         </div>
     );
 };

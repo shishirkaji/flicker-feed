@@ -19,8 +19,13 @@
     box-sizing: border-box;
 }
 
+.search_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+}
+
 ::placeholder {
     color: white;
     opacity: 1;
 }
-

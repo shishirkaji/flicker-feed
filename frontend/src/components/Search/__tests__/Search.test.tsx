@@ -15,6 +15,7 @@ describe("Search", () => {
 
         expect(searchElement).toBeInTheDocument();
         expect(searchElement).toHaveAttribute("name", "searchTerm");
+        expect(searchElement).toHaveAttribute("placeholder", "Search flixer");
     });
 
     it("must be empty in the beginning", () => {
