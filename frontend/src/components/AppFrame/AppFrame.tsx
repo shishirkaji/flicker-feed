@@ -3,8 +3,8 @@ import "./AppFrame.css";
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">hello world</header>
+        <div className="App-frame" data-testid="AppFrame">
+            hello world
         </div>
     );
 }
