@@ -9,7 +9,6 @@
     font-size: calc(12px + 0.5vmin);
     color: white;
     padding: 0 1rem 0 1rem;
-
 }
 
 .wrapper {
@@ -17,4 +16,15 @@
     grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
     gap: 2rem;
     justify-content: center;
+}
+
+h1 {
+    position: relative;
+    max-width: 17rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
 }
