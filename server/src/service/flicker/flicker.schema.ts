@@ -13,7 +13,7 @@ const flickerResponseSchema = Joi.object<FlickerFeedResponse>({
     items: Joi.array()
         .items(
             Joi.object({
-                title: commonStringSchema,
+                title: commonStringSchema.allow(""),
                 link: Joi.string(),
                 media: Joi.object({
                     m: commonStringSchema,

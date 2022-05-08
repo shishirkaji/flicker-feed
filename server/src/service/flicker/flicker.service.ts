@@ -10,8 +10,10 @@ const { sanitizeFeeds } = flickerHelper;
 const { FLICKER_FEED_URL } = constants;
 
 const flickerService = {
-    getFlickers: async () => {
-        const { data } = await axios.get(FLICKER_FEED_URL);
+    getFlickers: async (searchTerm?: string) => {
+        const { data } = await axios.get(
+            `${FLICKER_FEED_URL}${searchTerm ? `&tags=${searchTerm}` : ""}`
+        );
 
         const jsonResponse = evaluateFlickerJsonP(data);
         let validatedData: FlickerFeedResponse;
