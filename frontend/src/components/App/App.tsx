@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import "./app.css";
 import Search from "../search/search";
 import Card from "../card/card";
@@ -9,7 +11,7 @@ import { FlickerFeed } from "../common";
 import flickerService from "../../services/flicker.service";
 import useDebounce from "../../customHooks/useDebounce";
 import Image from "../image/image";
-import { Navigate } from "react-router-dom";
+
 function App() {
     const [feeds, setFeeds] = useState<FlickerFeed[]>();
     const [isLoading, setIsLoading] = useState(true);
