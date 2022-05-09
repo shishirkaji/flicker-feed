@@ -49,9 +49,11 @@ function App() {
                                 <Card
                                     key={feed.author + feed.imageUrl + index}
                                     imageUrl={feed.imageUrl}
+                                    author={feed.author}
+                                    date={feed.date}
                                     thumbNail={feed.thumbnailUrl}
                                     title={feed.title}
-                                    tags={feed.tags.join(" ")}
+                                    tags={feed.tags.join(", ")}
                                 />
                             );
                         })}

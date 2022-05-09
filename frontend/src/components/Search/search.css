@@ -1,6 +1,6 @@
 .input-contain {
     position: relative;
-    max-width: 17rem;
+    max-width: 24rem;
     margin-left: auto;
     margin-right: auto;
     width: 22em;
@@ -20,6 +20,7 @@
     outline: none;
     margin: 0;
     box-sizing: border-box;
+    height: 3.5rem;
 }
 
 .search_wrapper {

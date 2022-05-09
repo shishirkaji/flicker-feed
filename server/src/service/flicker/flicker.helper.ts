@@ -9,11 +9,12 @@ const sanitizeFeeds = (data: FlickerFeedResponse) => {
 
     const getArrayOfTags = (tags: FlickerFeed["tags"]) => {
         const transformedTagsArray = tags.split(" ");
-
-        return transformedTagsArray.length === 1 &&
-            transformedTagsArray[0] === ""
+        const uppercaseTagsArray = transformedTagsArray.map((tag) => {
+            return tag.toLocaleUpperCase();
+        });
+        return uppercaseTagsArray.length === 1 && uppercaseTagsArray[0] === ""
             ? []
-            : transformedTagsArray;
+            : uppercaseTagsArray;
     };
     return data.items.map((item) => {
         return {

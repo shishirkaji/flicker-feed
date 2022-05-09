@@ -11,11 +11,15 @@ describe("Card", () => {
         title: "some title",
         imageUrl: "image urls",
         thumbNail: "thumbnail url",
+        author: "shishir",
+        date: new Date().toISOString(),
     };
 
     it("must render without crashing", () => {
         render(
             <Card
+                author={cardProps.author}
+                date={cardProps.date}
                 tags={cardProps.tags}
                 title={cardProps.title}
                 imageUrl={cardProps.imageUrl}
@@ -32,6 +36,8 @@ describe("Card", () => {
     it("must have have required children with correct attribute or content", () => {
         render(
             <Card
+                author={cardProps.author}
+                date={cardProps.date}
                 tags={cardProps.tags}
                 title={cardProps.title}
                 imageUrl={cardProps.imageUrl}
@@ -40,12 +46,12 @@ describe("Card", () => {
         );
 
         const image = screen.getByRole("img");
-        const title = screen.getByRole("heading");
+        const author = screen.getByRole("heading");
         const button = screen.getByRole("button");
         const tags = screen.getByTestId("tags");
 
         expect(image.getAttribute("src")).toEqual(cardProps.thumbNail);
-        expect(title).toHaveTextContent(cardProps.title);
+        expect(author).toHaveTextContent(cardProps.author);
         expect(tags).toHaveTextContent(cardProps.tags);
         expect(button).toHaveAttribute("class", "card_btn");
     });
@@ -53,6 +59,8 @@ describe("Card", () => {
     it("must redirect to /image/?url=image_url when a button is clicked", () => {
         render(
             <Card
+                author={cardProps.author}
+                date={cardProps.date}
                 tags={cardProps.tags}
                 title={cardProps.title}
                 imageUrl={cardProps.imageUrl}
