@@ -1,0 +1,8 @@
+.image_page {
+    position: relative;
+    max-width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

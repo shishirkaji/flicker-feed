@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./app.css";
 import Search from "../Search/Search";
 import Card from "../Card/Card";
@@ -8,7 +8,8 @@ import Spinner from "../Spinner/Spinner";
 import { FlickerFeed } from "../common";
 import flickerService from "./../../services/flicker.service";
 import useDebounce from "../../customHooks/useDebounce";
-
+import Image from "../Image/Image";
+import { Navigate } from "react-router-dom";
 function App() {
     const [feeds, setFeeds] = useState<FlickerFeed[]>();
     const [isLoading, setIsLoading] = useState(true);
@@ -61,15 +62,31 @@ function App() {
             </>
         );
     };
-    return (
-        <>
-            <div className="App-frame" data-testid="AppFrame">
+
+    const AppFrame = () => {
+        return (
+            <>
+                {" "}
                 <Search
                     onSearchTermChange={onSearchTermChange}
                     search={search}
                 />
                 {isLoading ? <Spinner /> : showFeeds()}
-            </div>
+            </>
+        );
+    };
+
+    return (
+        <>
+            <BrowserRouter>
+                <div className="App-frame" data-testid="AppFrame">
+                    <Routes>
+                        <Route path="/" element={<AppFrame />} />
+                        <Route path="/image" element={<Image />} />
+                        <Route path="*" element={<Navigate to="/" />} />
+                    </Routes>
+                </div>
+            </BrowserRouter>
         </>
     );
 }
