@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import AppFrame from "./../App";
+import AppFrame from "../app";
 import "@testing-library/jest-dom";
 
 describe.skip("AppFrame", () => {

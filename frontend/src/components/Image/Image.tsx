@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router";
-import Spinner from "../Spinner/Spinner";
+import Spinner from "../spinner/spinner";
 import "./image.css";
 
 const Image = () => {

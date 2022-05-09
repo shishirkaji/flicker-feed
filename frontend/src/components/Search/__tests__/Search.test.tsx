@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { render, screen } from "@testing-library/react";
-import Search from "../Search";
+import Search from "../search";
 
 describe("Search", () => {
     let searchElement: HTMLElement;

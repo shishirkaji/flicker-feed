@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./app.css";
-import Search from "../Search/Search";
-import Card from "../Card/Card";
-import CardFrame from "../CardFrame/CardFrame";
-import Spinner from "../Spinner/Spinner";
+import Search from "../search/search";
+import Card from "../card/card";
+import CardFrame from "../cardFrame/cardFrame";
+import Spinner from "../spinner/spinner";
 import { FlickerFeed } from "../common";
-import flickerService from "./../../services/flicker.service";
+import flickerService from "../../services/flicker.service";
 import useDebounce from "../../customHooks/useDebounce";
-import Image from "../Image/Image";
+import Image from "../image/image";
 import { Navigate } from "react-router-dom";
 function App() {
     const [feeds, setFeeds] = useState<FlickerFeed[]>();
@@ -24,6 +24,7 @@ function App() {
 
     const onSearchTermChange = (newSearchTerm: string) => {
         setIsLoading(true);
+
         setSearch(newSearchTerm);
     };
 

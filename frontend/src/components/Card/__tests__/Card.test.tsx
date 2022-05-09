@@ -1,8 +1,9 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter as Router } from "react-router-dom";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 
-import Card from "../Card";
+import Card from "../card";
 
 describe("Card", () => {
     let cardElement: HTMLElement;
@@ -17,14 +18,16 @@ describe("Card", () => {
 
     it("must render without crashing", () => {
         render(
-            <Card
-                author={cardProps.author}
-                date={cardProps.date}
-                tags={cardProps.tags}
-                title={cardProps.title}
-                imageUrl={cardProps.imageUrl}
-                thumbNail={cardProps.thumbNail}
-            />
+            <Router>
+                <Card
+                    author={cardProps.author}
+                    date={cardProps.date}
+                    tags={cardProps.tags}
+                    title={cardProps.title}
+                    imageUrl={cardProps.imageUrl}
+                    thumbNail={cardProps.thumbNail}
+                />
+            </Router>
         );
 
         cardElement = screen.getByTestId("card-test");
@@ -35,14 +38,16 @@ describe("Card", () => {
 
     it("must have have required children with correct attribute or content", () => {
         render(
-            <Card
-                author={cardProps.author}
-                date={cardProps.date}
-                tags={cardProps.tags}
-                title={cardProps.title}
-                imageUrl={cardProps.imageUrl}
-                thumbNail={cardProps.thumbNail}
-            />
+            <Router>
+                <Card
+                    author={cardProps.author}
+                    date={cardProps.date}
+                    tags={cardProps.tags}
+                    title={cardProps.title}
+                    imageUrl={cardProps.imageUrl}
+                    thumbNail={cardProps.thumbNail}
+                />
+            </Router>
         );
 
         const image = screen.getByRole("img");
@@ -58,14 +63,16 @@ describe("Card", () => {
 
     it("must redirect to /image/?url=image_url when a button is clicked", () => {
         render(
-            <Card
-                author={cardProps.author}
-                date={cardProps.date}
-                tags={cardProps.tags}
-                title={cardProps.title}
-                imageUrl={cardProps.imageUrl}
-                thumbNail={cardProps.thumbNail}
-            />
+            <Router>
+                <Card
+                    author={cardProps.author}
+                    date={cardProps.date}
+                    tags={cardProps.tags}
+                    title={cardProps.title}
+                    imageUrl={cardProps.imageUrl}
+                    thumbNail={cardProps.thumbNail}
+                />
+            </Router>
         );
 
         const button = screen.getByRole("button");
@@ -73,7 +80,7 @@ describe("Card", () => {
 
         expect(global.window.location.pathname).toEqual(`/image`);
         expect(global.window.location.search).toEqual(
-            `?url=${encodeURI(cardProps.imageUrl)}`
+            `?imageUrl=${encodeURI(cardProps.imageUrl)}`
         );
     });
 });
